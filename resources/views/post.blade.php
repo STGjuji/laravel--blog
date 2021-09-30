@@ -21,7 +21,7 @@
         </p>
     </article>
 
-    <a href="/">Go back</a>
+    <a href="/">Go</a>
 </body>
 
 </html>
