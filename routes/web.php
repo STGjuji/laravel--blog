@@ -14,19 +14,18 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('posts');
+    return view('posts', [
+        'posts' => \App\Models\Post::all()
+    ]);
 });
 
 Route::get('posts/{post}', function ($slug) {
-        $path = __DIR__ . "/../resources/posts/{$slug}.html";
 
-        if(! file_exists($path)) {
-           return redirect('/');
-        }
+    $post = App\Models\Post::find($slug);
+    return view('post', [
+        'post' => $post
+    ]);
 
-        $post = file_get_contents($path);
 
-        return view('post', [
-                'post' => $post
-            ]);
-});
+    })->where('post', '[A-z_/-]+');
+
