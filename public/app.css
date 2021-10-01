@@ -15,3 +15,15 @@ article+article {
     padding: 3rem;
     border-top: 1px solid #c5c5c5c5;
 }
+
+.link {
+    text-decoration: none;
+    color: purple;
+
+}
+
+.link:hover {
+    text-decoration: none;
+    color: blueviolet;
+
+}

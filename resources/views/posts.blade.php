@@ -11,7 +11,7 @@
 
 <body>
     <article>
-        <a href="/post">
+        <a href="/resources/posts/my-first-post.html" class="link">
             <h1>
                 My First Post
             </h1>
@@ -22,7 +22,7 @@
         </p>
     </article>
     <article>
-        <a href="/post">
+        <a href="/resources/posts/my-second-post.html" class="link">
             <h1>
                 My Second Post
             </h1>
@@ -33,7 +33,7 @@
         </p>
     </article>
     <article>
-        <a href="/post">
+        <a href="/resources/posts/my-third-post.html" class="link">
             <h1>
                 My Third Post
             </h1>
