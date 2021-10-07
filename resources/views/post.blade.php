@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-    <link rel="stylesheet" href="./app.css">
+    <link rel="stylesheet" href="/public/app.css">
     <title>Document</title>
 <body>
     <article>
