@@ -14,9 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('posts', [
-        'posts' => \App\Models\Post::all()
-    ]);
+    $files = \Illuminate\Support\Facades\File::files(resource_path("/../resources/posts/"));
+
+    array_map(function ($file) {
+        return $file->getContents();
+    }, $files);
 });
 
 Route::get('posts/{post}', function ($slug) {

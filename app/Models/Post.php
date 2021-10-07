@@ -7,14 +7,6 @@ use Illuminate\Support\Facades\File;
 
 class Post
 {
-    public static function all()
-    {
-        $files = File::files(resource_path("/../resources/posts/"));
-
-        array_map(function ($file) {
-            return $file->getContents();
-        }, $files);
-    }
 
     public static function find($slug)
     {
