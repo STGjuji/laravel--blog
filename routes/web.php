@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     $files = \Illuminate\Support\Facades\File::files(resource_path("/../resources/posts/"));
 
+
     array_map(function ($file) {
         return $file->getContents();
     }, $files);

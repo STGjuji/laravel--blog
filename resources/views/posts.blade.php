@@ -3,10 +3,9 @@
 <link rel="stylesheet" href="/public/app.css">
 
 <body>
-<?php foreach ($posts as $post) : ?>
-
-<article>
-    <?= $post; ?>
-</article>
-<?php endforeach; ?>
+    <?php $posts =;foreach ($posts as $post) : ?>
+        <article>
+            <?= $post; ?>
+        </article>
+    <?php endforeach; ?>
 </body>
