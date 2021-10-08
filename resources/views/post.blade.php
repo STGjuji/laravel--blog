@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-    <link rel="stylesheet" href="/public/app.css">
+<head>
+    <link rel="stylesheet" href="{{ asset('/app.css') }}">
     <title>Document</title>
+</head>
+
 <body>
     <article>
-        <?= $post; ?>
+        <?= $post = $post; ?>
     </article>
 
     <a href="/">Go</a>

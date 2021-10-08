@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<title>My Blog</title>
-<link rel="stylesheet" href="/public/app.css">
+<head>
+    <link rel="stylesheet" href="/app.css" />
+    <title>Document</title>
+</head>
 
 <body>
-    <?php $posts =;foreach ($posts as $post) : ?>
+    <?php foreach ($posts as $post) : ?>
         <article>
-            <?= $post; ?>
+            <h1><?php $post ->title; ?></h1>
         </article>
     <?php endforeach; ?>
 </body>

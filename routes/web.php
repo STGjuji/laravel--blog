@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,22 +14,29 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+
 Route::get('/', function () {
-    $files = \Illuminate\Support\Facades\File::files(resource_path("/../resources/posts/"));
+    $files = File::files(resource_path("posts"));
+    $posts = [];
+
+    foreach ($files as $file) {
+        $document = \Spatie\YamlFrontMatter\YamlFrontMatter::parseFile($file);
+    }
+
+return view('posts', [
+    'posts' => $posts
+]);
 
 
-    array_map(function ($file) {
-        return $file->getContents();
-    }, $files);
+    //    return view('posts', [
+//        'posts' => \App\Models\Post::all()
+//    ]);
 });
 
-Route::get('posts/{post}', function ($slug) {
 
-    $post = App\Models\Post::find($slug);
+Route::get('posts/{posts}', function ($slug) {
     return view('post', [
-        'post' => $post
+        'post' => \App\Models\Post::find($slug)
     ]);
-
-
-    })->where('post', '[A-z_/-]+');
-
+})->where('post', '[A-z_/-]+');

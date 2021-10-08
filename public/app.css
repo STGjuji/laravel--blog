@@ -1,29 +1,34 @@
 body {
-    background: white;
     color: #222222;
     max-width: 600px;
     margin: auto;
     font-family: sans-serif;
+    background: #0F2027;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+}
+
+h1 {
+    color: white;
 }
 
 p {
-    line-height: 1.6;
+    color: white;
 }
 
-article+article {
+article + article {
     margin-top: 3rem;
-    padding: 3rem;
-    border-top: 2px solid blueviolet;
+    padding-top: 3rem;
+    border-top: 1px solid #c5c5c5;
 }
 
-.link {
+a {
+    color: white;
     text-decoration: none;
-    color: purple;
-
 }
 
-.link:hover {
-    text-decoration: none;
-    color: blueviolet;
-
+a:hover {
+    color: darkslategrey;
 }
