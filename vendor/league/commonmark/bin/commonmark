@@ -1,6 +1,8 @@
 #!/usr/bin/env php
 <?php
 
+use League\CommonMark\CommonMarkConverter;
+
 trigger_error('The "bin/commonmark" command has been deprecated since league/commonmark 1.4', E_USER_DEPRECATED);
 
 requireAutoloader();
@@ -46,7 +48,7 @@ foreach ($argv as $i => $arg) {
                 exit(0);
             case '-v':
             case '--version':
-                echo \League\CommonMark\CommonMarkConverter::VERSION . "\n";
+                echo CommonMarkConverter::VERSION . "\n";
                 exit(0);
             case '--safe':
                 $options['safe'] = true;
@@ -83,7 +85,7 @@ if (isset($src)) {
     }
 }
 
-$converter = new \League\CommonMark\CommonMarkConverter($options);
+$converter = new CommonMarkConverter($options);
 echo $converter->convertToHtml($markdown);
 
 /**
