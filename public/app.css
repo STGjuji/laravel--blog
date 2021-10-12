@@ -1,17 +1,29 @@
 body {
-    background: white;
-    color: #222222;
+    color: white;
     max-width: 600px;
     margin: auto;
     font-family: sans-serif;
+    background: linear-gradient(to right, #8e2de2, #4a00e0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
-
+h1 {
+    color: #fff;
+}
+h1:hover {
+    color: #8e2de2;
+    transition: ease-in-out 150ms;
+}
 p {
-    line-height: 1.6;
+    color: white;
 }
-
-article+article {
+article + article {
     margin-top: 3rem;
-    padding: 3rem;
-    border-top: 1px solid #c5c5c5c5;
+    padding-top: 3rem;
+    border-top: 1px solid #c5c5c5;
+}
+a {
+    color: white;
+    text-decoration: none;
+}
+a:hover {
+    color: darkslategrey;
 }
