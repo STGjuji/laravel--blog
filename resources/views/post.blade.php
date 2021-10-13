@@ -15,11 +15,11 @@
            {{ $post->title }}
        </h1>
 
-        <h6>
-            <a href="/categories/{{ $post->category->id }}">
+        <h4>
+           By <a href="/" class="author">{{ $post->user->name }}</a> in <a class="category" href="/categories/{{ $post->category->slug }}">
                 {{ $post->category->name }}
             </a>
-        </h6>
+        </h4>
 
         <div>
             {{ $post->body }}

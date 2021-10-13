@@ -15,15 +15,18 @@
                     {{ $post->title }}
                 </a>
             </h1>
-            <h6>
-                <a href="/categories/{{ $post->category->id }}">
-                    {{ $post->category->name }}
-                </a>
-            </h6>
+            <h4>
+                By <a href="/">{{ $post->category->slug }}</a> in <a href="/">{{ $post->category->name }}</a>
+            </h4>
 
             <div>
                 {{ $post->excerpt }}
             </div>
+            <br>
+            <br>
+            <a class="post__a" href="/">
+                Go back
+            </a>
         </article>
     @endforeach
 </html>

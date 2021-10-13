@@ -11,8 +11,24 @@ a {
     text-decoration: none;
 }
 a:hover {
-    color: #8e2de2;
+    color: blueviolet;
     transition: ease-in-out 250ms;
+}
+
+.author  {
+    color: #c471ed;
+}
+
+.category{
+    color: #c471ed;
+}
+
+.author:hover  {
+    color: #fff;
+}
+
+.category:hover {
+    color: #fff;
 }
 
 div  {
