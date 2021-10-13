@@ -15,6 +15,12 @@
            {{ $post->title }}
        </h1>
 
+        <h6>
+            <a href="/categories/{{ $post->category->id }}">
+                {{ $post->category->name }}
+            </a>
+        </h6>
+
         <div>
             {{ $post->body }}
         </div>

@@ -12,8 +12,9 @@ a {
 }
 a:hover {
     color: #8e2de2;
-    transition: ease-in-out;
+    transition: ease-in-out 250ms;
 }
+
 div  {
     color: white;
     line-height: 1.8em;

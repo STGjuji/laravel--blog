@@ -15,6 +15,11 @@
                     {{ $post->title }}
                 </a>
             </h1>
+            <h6>
+                <a href="/categories/{{ $post->category->id }}">
+                    {{ $post->category->name }}
+                </a>
+            </h6>
 
             <div>
                 {{ $post->excerpt }}
@@ -22,5 +27,3 @@
         </article>
     @endforeach
 </html>
-
-
